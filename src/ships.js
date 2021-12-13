@@ -4,7 +4,9 @@ const DestroyerShip = () => {
    let destroyerHealth = 2;
    let destroyerSunk = false;
 
-   function damageTaken (x){
+   let cruiserLength = ['hit', 'hit', 'hit']
+
+   function hit(x){
     //mark a position on a destroyerLength.
 
     if(x === 1){
@@ -17,21 +19,23 @@ const DestroyerShip = () => {
         console.log("second");
         return destroyerLength[1];
     }
-
    }
 
-    function checkHealth(){
-        for(let i = 0; i < destroyerLength.length; i++){
-            let hitScored = 0;
-            if(destroyerLength[i] === 'hit'){
+    function checkHealth(ship){
+        let hitScored = 0;
+        let sunk = false;
+      
+        for(let i = 0; i < ship.length; i++){
+            if(ship[i] === 'hit'){
                 hitScored++
-                if(hitScored === 2){
-                    return 'sunk';
+                if(hitScored === ship.length){
+                    return sunk = true;
                 }
             }
+            else{ return sunk = false}
         }
     }
-    return {destroyerLength, destroyerHealth, destroyerSunk, damageTaken, checkHealth}
+    return {destroyerLength, destroyerHealth, destroyerSunk, hit, checkHealth,cruiserLength}
 }
 
 function youSunkMyShip(ship){
