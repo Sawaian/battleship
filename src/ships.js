@@ -11,9 +11,8 @@ class Ship {
         if(hullDamage === 0){
             return ship.sunk = true;
         }
-        else { 
             return hullDamage
-        }
+        
     }
 }
 
