@@ -14,7 +14,11 @@ const PlayerOneDestroyer = require('./ships.js')
 // })
 
 test(' ship hit! ', () =>{
-    expect(PlayerOneDestroyer.takenDamage(PlayerOneDestroyer.health,1)).toBe(1);
+    expect(PlayerOneDestroyer.takenDamage(PlayerOneDestroyer,1)).toBe(1);
+}) 
+
+test( ' Ship Sunk ', () =>{
+    expect(PlayerOneDestroyer.takenDamage(PlayerOneDestroyer, true)).toBe(true);
 })
 
 // test(' destroyer ', () => {n

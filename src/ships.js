@@ -6,10 +6,14 @@ class Ship {
     this.sunk = false;
     }
 
-
-
     takenDamage(ship, damage){
-      return ship - damage;
+        let hullDamage =  ship.health- damage;
+        if(hullDamage === 0){
+            return ship.sunk = true;
+        }
+        else { 
+            return hullDamage
+        }
     }
 }
 
