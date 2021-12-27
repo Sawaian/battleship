@@ -2,18 +2,27 @@
 class Ship {
     constructor(health){
     this.health = health;
-    this.length = [0,0]
+    this.length = Array(health);
     this.sunk = false;
     }
+
+
 
     takenDamage(ship, damage){
         let hullDamage =  ship.health- damage;
         if(hullDamage === 0){
             return ship.sunk = true;
         }
-            return hullDamage
-        
+            return hullDamage 
     }
+
+    //     shipLength(health){
+    //     let shipCount = health;
+    //     for(let i = 0; i < this.length.length; i--){
+    //          shipCount++
+    //     }
+    //     return shipCount
+    // }
 }
 
 let PlayerOneDestroyer = new Ship(2);
