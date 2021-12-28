@@ -11,5 +11,10 @@ test( ' Ship Sunk ', () =>{
 })
 
 test( 'ship length', () => {
-    expect(PlayerOneDestroyer.shipLength(3)).toBe(0);
+    expect(PlayerOneDestroyer.shipLength(3)).toBe(3);
 })
+
+
+// test( 'ship length Array', () => {
+//     expect(PlayerOneDestroyer.shipArrayLength(3)).toBe(3);
+// })

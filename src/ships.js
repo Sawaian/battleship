@@ -2,7 +2,7 @@
 class Ship {
     constructor(health){
     this.health = health;
-    this.length = Array(health);
+    this.length = 0;
     this.sunk = false;
     }
 
@@ -15,6 +15,14 @@ class Ship {
         }
             return hullDamage 
     }
+
+    shipLength(length){
+        return this.length = Array(length)
+    }
+
+    // shipLengthArray(length){
+    //     return this.length = Array(length)
+    // }
 
     //     shipLength(health){
     //     let shipCount = health;
