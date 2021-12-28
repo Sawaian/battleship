@@ -2,7 +2,7 @@
 class Ship {
     constructor(health){
     this.health = health;
-    this.length = 0;
+    this.length = [0,0,0];
     this.sunk = false;
     }
 
